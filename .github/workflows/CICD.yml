@@ -74,10 +74,5 @@ jobs:
 
             docker run -d \
               --name spring-server \
-              -e SPRING_DATASOURCE_URL=${{ secrets.MYSQL_URL }} \
-              -e SPRING_DATASOURCE_USERNAME=${{ secrets.MYSQL_USERNAME }} \
-              -e SPRING_DATASOURCE_PASSWORD=${{ secrets.MYSQL_PASSWORD }} \
-              -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
-              -e REDIS_PASSWORD=${{ secrets.REDIS_PASSWORD }} \
               -p 8080:8080 \
               ${{ secrets.DOCKER_USERNAME }}/steam-server:latest
