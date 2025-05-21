@@ -72,7 +72,7 @@ jobs:
               docker rm spring-server
             fi
 
-            docker run -d \
+            docker run -d \ 
               --name spring-server \
               -e SPRING_DATASOURCE_URL=${{ secrets.MYSQL_URL }} \
               -e SPRING_DATASOURCE_USERNAME=${{ secrets.MYSQL_USERNAME }} \
